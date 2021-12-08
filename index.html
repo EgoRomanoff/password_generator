@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/d3888d5c02.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="generator">
+    <h2 class="generator__title">Generate Password</h2>
+
+    <div class="generator__controls">
+      <div class="controls__length">
+        <label class="controls__length--label" for="length">Length (8-16)</label>
+        <input class="controls__length--input" id="length" type="number" min="8" max="16" value="12">
+      </div>
+      <div class="controls__symbols">
+        <span class="controls__symbols--title">Punctuation marks</span>
+        <div class="controls__symbols--inner">
+          <div class="controls__symbols--wrapper">
+            <input class="controls__symbols--checkbox" id="symbolsYes" type="radio" name="symbols" value="1" checked>
+            <label class="controls__symbols--label" for="symbolsYes">Yes</label>
+          </div>
+          <div class="controls__symbols--wrapper">
+            <input class="controls__symbols--checkbox" id="symbolsNo" type="radio" name="symbols" value="0">
+            <label class="controls__symbols--label" for="symbolsNo">No</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="generator__elements">
+      <button class="elements__btn btn--copy" id="btn--copy" title="Copy">
+        <i class="fa fa-copy"></i>
+      </button>
+      <input class="elements__input" id="password" type="text" placeholder="Password" readonly>
+      <button class="elements__btn btn--generate" id="btn--generate" title="Generate">
+        <i class="fa fa-wand-magic"></i>
+      </button>
+    </div>
+    <div class="info">Copied to clipboard</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
